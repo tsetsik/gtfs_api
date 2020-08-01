@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_29_085859) do
+ActiveRecord::Schema.define(version: 2020_07_29_193412) do
 
   create_table "gtfs_engine_agencies", force: :cascade do |t|
     t.string "agency_id"
@@ -208,6 +208,22 @@ ActiveRecord::Schema.define(version: 2020_07_29_085859) do
     t.index ["service_id"], name: "index_gtfs_engine_trips_on_service_id"
     t.index ["shape_id"], name: "index_gtfs_engine_trips_on_shape_id"
     t.index ["trip_id"], name: "index_gtfs_engine_trips_on_trip_id"
+  end
+
+  create_table "stops", force: :cascade do |t|
+    t.string "code"
+    t.string "name"
+    t.string "desc"
+    t.float "lat"
+    t.float "lon"
+    t.string "zone_id"
+    t.string "url"
+    t.integer "location_type"
+    t.integer "parent_station"
+    t.string "timezone"
+    t.integer "wheelchair_boarding"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
 end

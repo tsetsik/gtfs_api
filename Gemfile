@@ -38,7 +38,19 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
+group :test do
+  gem 'cucumber-rails', require: false
+  # database_cleaner is not mandatory, but highly recommended
+  gem 'database_cleaner'
+  gem "rspec", "~> 3.9"
+  gem "rspec-rails", "~> 4.0"
+  gem "httparty", "~> 0.18.1"
+end
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-gem "gtfs_engine", "= 2.1.0"
+gem "gtfs", "~> 0.2.5"
+
+gem "foreman", "~> 0.87.1"
+
