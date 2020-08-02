@@ -8,9 +8,7 @@ class ImportService
   def import
     return false unless valid?
 
-    import!
-
-    true
+    return import!
   end
 
   private
@@ -22,13 +20,19 @@ class ImportService
   end
 
   def import!
+    return false if records.blank?
+
     model.create(records)
+
+    true
   end
 
   def records
     @records ||= source.send(property).map do |r|
       r.as_json.except('id')
     end
+  rescue GTFS::InvalidSourceException
+    []
   end
 
   def source
