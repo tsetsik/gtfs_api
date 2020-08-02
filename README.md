@@ -1,24 +1,25 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is project is a developed with [ruby on rails](https://rubyonrails.org) in `api` mode
 
-Things you may want to cover:
+# Technical information
+* Ruby on rails
+* Foremand
+* GTFS
+* Cucumber
+* Rspec
 
-* Ruby version
 
-* System dependencies
+# How to run the project
+By executing `foreman start`
 
-* Configuration
+# How to run the cucumber tests
+`bundle exec cucumber`
 
-* Database creation
+# How to run rspec tests
+`bundle exec rspec spec/`
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# Improvments that can be done
+* make rake ci task
+* Adding more endpoints by extracing them from the gtfs file
+* Rake task for seeding data
