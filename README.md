@@ -1,6 +1,6 @@
 # README
 
-This is project is a developed with [ruby on rails](https://rubyonrails.org) in `api` mode
+This is project is developed with [ruby on rails](https://rubyonrails.org) in `api` mode
 
 # Technical information
 * Ruby on rails
