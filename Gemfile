@@ -44,7 +44,7 @@ group :test do
   gem 'database_cleaner'
   gem 'rspec', '~> 3.9'
   gem 'rspec-rails', '~> 4.0'
-  gem 'httparty', '~> 0.18.1'
+  gem 'httparty', '~> 0.21.0'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
